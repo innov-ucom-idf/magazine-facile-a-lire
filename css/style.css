@@ -12,22 +12,20 @@
         max-width: 100%;
         background: #C8C8C8;
     }
-    ::-moz-selection,
-    ::selection {
-        color: #fff;
-        background: #000;
-    }
+
     a,
     a:link {
         color: #F00;
-        text-decoration: none
     }
     a:hover {
-        text-decoration: underline
+        text-decoration :  underline;
     }
     a:visited {
         color: #551A8B;
     }
+
+    :focus {border: 1px dotted black}
+
     .css-hide {
         display: none
     }
@@ -127,11 +125,6 @@
     .contrast-active a {
         color: yellow !important;
     }
-    .contrast-active a:visited,
-    {
-        color: lightyellow !important;
-    }
-
 
 }
 
@@ -1010,9 +1003,7 @@
         color: #666;
         padding: 3px 10px 3px 0px;
     }
-    .nav-article .lien-sommaire {
-        display: none;
-    }
+
     article h2 {
         display: block;
         font-size: 2.5em;
@@ -1098,10 +1089,17 @@
         border-top: 40px #F00 solid;
         /* clear sur le footer pour qu'il se mette en bas de main et non en bas de nav */
     }
-    footer > article {
+    footer   {
         font-size: 0.7em;
         line-height: 0.8em;
+        padding: 0;
+        margin: 0;
     }
+
+
+    footer h2, h3, h4, h5 {margin:15px 0px 20px 0px;}
+
+
     .clear {
         clear: both;
     }
