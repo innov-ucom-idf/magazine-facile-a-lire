@@ -1,10 +1,40 @@
 ﻿@import url('reset.css');
 /* import du CSS de remise à zéro des marges */
 
+
+@font-face{
+    font-family : 'open-dyslexic';
+    src: url(fonts/OpenDyslexic-Regular.otf);
+} 
+
+@font-face{
+    font-family : 'open-dyslexic';
+    src: url(fonts/OpenDyslexic-Bold.otf);
+    font-weight: bold;
+} 
+
+@font-face{
+    font-family : 'open-dyslexic';
+    src: url(fonts/OpenDyslexic-Italic.otf);
+    font-style: italic;
+} 
+
+@font-face{
+    font-family : 'open-dyslexic';
+    src: url(fonts/OpenDyslexic-BoldItalic.otf);
+    font-style: italic;
+    font-weight: bold;
+} 
+
 @media screen
 /* Règles générales */
 
 {
+
+
+
+
+
     body {
         font-family: 'Arial', 'Sans-serif';
         display: block;
@@ -12,6 +42,11 @@
         max-width: 100%;
         background: #C8C8C8;
     }
+
+    .dyslexie-on {
+        font-size: 0.9em;
+        font-family: 'open-dyslexic', 'Comic Sans', 'cursive' , 'Sans-serif';}
+    .dyslexie-off {font-family: 'Arial', 'Sans-serif';}
 
     a,
     a:link {
@@ -620,9 +655,9 @@
         background: #F00;
         color: #FFF;
         height: 22px;
-        width: 225px;
+        width: 300px;
         top: 0;
-        right: 2%;
+        right: 0%;
         z-index: 100;
     }
     #outils a,
@@ -873,10 +908,14 @@
         background: #F00;
         color: #FFF;
         height: 22px;
-        width: 225px;
+        width: 320px;
         top: 0;
-        right: 2%;
+        right: 0%;
     }
+
+
+
+
     #outils a,
     #outils span {
         color: #FFF;

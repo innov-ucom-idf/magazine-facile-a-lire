@@ -1,5 +1,9 @@
+
+
+
+
 var menuBtn = $("#menu-button"),
-  menu = $("#sommairefixe");
+menu = $("#sommairefixe");
 
 /* Fonction d'impression de l'article en cours */
 function printArticle(articleName) {
@@ -12,24 +16,27 @@ function printArticle(articleName) {
 
 // Cacher le menu
 function hideMenu() {
-    menuBtn.removeClass("active");
-    menu.attr('aria-hidden', 'true');
-    menuBtn.attr('aria-expanded', 'false');
-  }
-  // Afficher le menu
-function showMenu() {
-  menuBtn.addClass("active");
-  menu.attr('aria-hidden', 'false');
-  menuBtn.attr('aria-expanded', 'true');
+  menuBtn.removeClass("active");
+  menu.attr('aria-hidden', 'true');
+  menuBtn.attr('aria-expanded', 'false');
 }
+  // Afficher le menu
+  function showMenu() {
+    menuBtn.addClass("active");
+    menu.attr('aria-hidden', 'false');
+    menuBtn.attr('aria-expanded', 'true');
+  }
 
 
-$(document).ready(function () {
+
+
+    $(document).ready(function () {
+
 
   // Contrast
   $("#contrast").on("click", function (e) {
     var that = $(this),
-      body = $("body");
+    body = $("body");
 
     if (that.hasClass("active")) {
       that.removeClass("active").attr("title", "Activer le mode contraste");
@@ -42,10 +49,17 @@ $(document).ready(function () {
     return e.preventDefault();
   });
 
+  // Dyslexie
+  $('#dyslexie').on("click", function (e) {
+
+    $("body").toggleClass("dyslexie-on");
+
+  });
+
   // Anciens magazines
   $("#sous-titre").on("change", function (e) {
     var mag = $(this).val(),
-      url = "/";
+    url = "/";
 
     if (mag == "last") {
       url += "index.html";
@@ -70,8 +84,8 @@ $(document).ready(function () {
   });
 });
 
-if("matchMedia" in window) { 
-  
+    if("matchMedia" in window) { 
+
   // Sur un petit écran on cache le menu
   if (window.matchMedia("(max-width: 640px)").matches) {
     hideMenu();
@@ -82,9 +96,9 @@ if("matchMedia" in window) {
     /*global $, jQuery, alert*/
     $(function () {
       var $sidebar = $("#sommaire"),
-        $window = $(window),
-        offset = $("#page").offset(),
-        topPadding = 0;
+      $window = $(window),
+      offset = $("#page").offset(),
+      topPadding = 0;
       $window.scroll(function () {
         if ($window.scrollTop() > offset.top) {
           $sidebar.addClass("fixed");
@@ -112,7 +126,7 @@ if("matchMedia" in window) {
         $target = $(target);
         $('html, body').stop().animate({
           'scrollTop': $target.offset().top
-        }, 500, 'swing', function () {
+        }, 300, 'swing', function () {
           window.location.hash = target;
           $(document).on("scroll", onScroll);
         });
@@ -120,19 +134,19 @@ if("matchMedia" in window) {
     });
 
     function onScroll(event) {
-        var scrollPosition = $(document).scrollTop();
-        $('nav a').each(function () {
-          var currentLink = $(this);
-          var refElement = $(currentLink.attr("href"));
-          if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-            $('nav ul li a').removeClass("active");
-            currentLink.addClass("active");
-          } else {
-            currentLink.removeClass("active");
-          }
-        });
-      }
-      /* Fonction de changement de CSS à l'activation du lien de menu */
+      var scrollPosition = $(document).scrollTop();
+      $('nav a').each(function () {
+        var currentLink = $(this);
+        var refElement = $(currentLink.attr("href"));
+        if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+          $('nav ul li a').removeClass("active");
+          currentLink.addClass("active");
+        } else {
+          currentLink.removeClass("active");
+        }
+      });
+    }
+    /* Fonction de changement de CSS à l'activation du lien de menu */
   }
 }
 

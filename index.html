@@ -37,11 +37,13 @@
              ga('send', 'pageview');
     </script><!-- End Google Analytics -->
 </head>
-<body>
+<body id="#body" class="">
     <div id="mobilemenuwraper">
         <header id="couverture" role="banner">
             <div id="outils">
-                <a href="#sommaire" onclick="return xt_click(this,'C','','Facile_a_lire_59::Header::Acces_menu','N')" title="Aller directement au sommaire">Sommaire</a> <a href="#articles" onclick="return xt_click(this,'C','','Facile_a_lire_59::Header::Acces_contenus','N')" title="Aller directement aux contenus">Contenus</a> <a class="contrast" href="javascript:void(0)" id="contrast" onclick="return xt_click(this,'C','','Facile_a_lire_59::Header::Acces_contraste','A')" title="Changer le contraste">Contraste <img alt="état actuel : contraste normal" class="contrast-off" src="http://facile-a-lire.iledefrance.fr/img/theme/contrast_off.png"> <img alt="état actuel : constraste renforcé" class="contrast-on" src="http://facile-a-lire.iledefrance.fr/img/theme/contrast_on.png"></a>
+                <a href="#sommaire" onclick="return xt_click(this,'C','','Facile_a_lire_59::Header::Acces_menu','N')" title="Aller directement au sommaire">Sommaire</a> 
+                <a href="#articles" onclick="return xt_click(this,'C','','Facile_a_lire_59::Header::Acces_contenus','N')" title="Aller directement aux contenus">Contenus</a>
+                <a class="contrast" href="javascript:void(0)" id="contrast" onclick="return xt_click(this,'C','','Facile_a_lire_59::Header::Acces_contraste','A')" title="Changer le contraste">Contraste <img alt="état actuel : contraste normal" class="contrast-off" src="img/theme/contrast_off.png"> <img alt="état actuel : constraste renforcé" class="contrast-on" src="img/theme/contrast_on.png"></a><a id="dyslexie" class="dyslexie-on" href="#" >Dyslexie</a>
             </div><a href="#">
             <div class="logo-idf">
                 <span class="css-hide">Le Magazine de la région Île-de-France, Accueil</span>
@@ -72,7 +74,7 @@
             <button aria-controls="liste-articles" aria-expanded="false" aria-label="Menu" class="menu-button" id="menu-button" onclick="return xt_click(this,'C','','Facile_a_lire_59::Header::Menu_mobile::clic','A')"><span aria-hidden="true">≡</span></button>
             <div aria-hidden="false" aria-labelledby="menu-button" id="sommairefixe">
                 <div id="sommaireheader">
-                    <img alt="Label Facile à lire et a comprendre" class="logo-falc" height="100" src="http://facile-a-lire.iledefrance.fr/img/theme/logo-falc-100.gif" width="100"> <a class="lien-sommaire" href="#couverture" onclick="return xt_click(this,'C','','Facile_a_lire_59::Sommaire_56::Retour_Sommaire','N')"><span>Sommaire</span></a>
+                    <img alt="Label Facile à lire et a comprendre" class="logo-falc" height="100" src="img/theme/logo-falc-100.gif" width="100"> <a class="lien-sommaire" href="#couverture" onclick="return xt_click(this,'C','','Facile_a_lire_59::Sommaire_56::Retour_Sommaire','N')"><span>Sommaire</span></a>
                 </div>
                 <ol id="liste-articles">
                     <li>
@@ -1143,11 +1145,11 @@
              else{window.xtparam="&ac="+xt_ac+"&an="+xt_an+xt_multc;};
              //-->
     </script> 
-    <script src="http://facile-a-lire.iledefrance.fr/js/xtcore.js" type="text/javascript">
+    <script src="js/xtcore.js" type="text/javascript">
     </script> <noscript><img alt="" height="1" src="http://logc406.xiti.com/hit.xiti?s=562587&s2=&p=&di=&an=&ac=" width="1"></noscript> 
-    <script src="http://facile-a-lire.iledefrance.fr/js/jquery.min.js" type="text/javascript">
+    <script src="js/jquery.min.js" type="text/javascript">
     </script> 
-    <script src="http://facile-a-lire.iledefrance.fr/js/js.js" type="text/javascript">
+    <script src="js/js.js" type="text/javascript">
     </script> <!-- Piwik -->
      
     <script type="text/javascript">
